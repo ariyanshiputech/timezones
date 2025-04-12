@@ -1,0 +1,62 @@
+{
+    "name": "ariyanshipu/timezones",
+    "description": "A simple and flexible Laravel package to manage, retrieve, and display timezones. Supports global timezone integration for user preferences, localization, or scheduling.",
+    "keywords": [
+        "laravel",
+        "timezones",
+        "timezone",
+        "laravel-timezones",
+        "timezone package",
+        "timezone list",
+        "localization",
+        "datetime",
+        "ariyanshipu"
+    ],
+    "homepage": "https://github.com/ariyanshipu/timezones",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ariyan Shipu",
+            "email": "noc@ariyanshipu.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": ">=8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": ">=6.0",
+        "phpunit/phpunit": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ariyanshipu\\Timezones\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ariyanshipu\\Timezones\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ariyanshipu\\Timezones\\TimezonesServiceProvider"
+            ],
+            "aliases": {
+                "Timezones": "Ariyanshipu\\Timezones\\TimezonesFacade"
+            }
+        }
+    }
+}
